@@ -5,7 +5,12 @@ def create(lista):
         if lista[i][0]==produto:
             teste = False        
     if teste: 
-        valor = float(input("\nDigite o valor: \n"))
+        while True:
+            try:
+                valor = float(input("\nDigite o valor: \n"))
+                break          
+            except ValueError:
+                print("Digite um número!")
         lista.append([produto, valor])
     else:
         print("\nEsse produto já existe!")
@@ -37,8 +42,3 @@ def delete(lista):
         if lista[i][0]==produto:
             print(f"\nProduto {lista[i][0]} removido!")
             lista.pop(i)
-
-
-
-
-
