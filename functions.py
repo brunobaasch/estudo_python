@@ -1,5 +1,6 @@
 def create(lista):
-    produto = input("\nDigite o nome do produto: ").lower().strip().replace(" ","_")
+    produto = input("\nDigite o nome do produto: ").lower().strip()
+    produto = "_".join(produto.split())
     teste = True
     for i in range(0, len(lista)):
         if lista[i][0]==produto:
