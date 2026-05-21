@@ -25,7 +25,6 @@ def update(lista):
     teste = False
     produto = input("\nQual produto voce quer atualizar?\n")
     produto = formatarTexto(produto)
-
     for i in range(0, len(lista)):
         if lista[i][0]==produto:
             teste = True
@@ -39,8 +38,8 @@ def update(lista):
                 create(lista)
 
 def delete(lista):
-    produto = input("\nQual produto voce quer remover?").lower().strip().replace(" ","_")
-    produto = "_".join(produto.split())
+    produto = input("\nQual produto voce quer remover?")
+    produto = formatarTexto(produto)
     for i in range(0, len(lista)):
         if lista[i][0]==produto:
             print(f"\nProduto {lista[i][0]} removido!")
